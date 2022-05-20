@@ -51,93 +51,6 @@ public class Warmup_1 {
         }
     }
     
-    private void testfunctions (String method){
-        switch(method){
-            case "sumDouble": {
-                System.out.println("sumDouble: 1 + 2 = "+ sumDouble(1, 2));
-                System.out.println("sumDouble: 3 + 2 = "+ sumDouble(3, 2));
-                System.out.println("sumDouble: 2 + 2 = "+ sumDouble(2, 2));                
-            } break;
-            case "diff21": {
-                System.out.println("diff21(2) = "+ diff21(2));
-                System.out.println("diff21(11) = "+ diff21(11));
-                System.out.println("diff21(0) = "+ diff21(0));
-                System.out.println("diff21(0) = "+ diff21(30));
-            } break;
-            case "parrotTrouble": {
-                System.out.println("parrotTrouble(true, 6) = "+parrotTrouble(true, 6));
-                System.out.println("parrotTrouble(true, 7) = "+parrotTrouble(true, 7));
-                System.out.println("parrotTrouble(false, 6) = "+parrotTrouble(false, 6));
-            } break;
-            case "makes10": {
-                System.out.println("makes10(9, 10) = "+makes10(9, 10));
-                System.out.println("makes10(9, 9) = "+makes10(9, 9));
-                System.out.println("makes10(1, 9) = "+makes10(1, 9));
-            } break;
-            case "nearHundred": {
-                System.out.println("nearHundred(93) = "+nearHundred(93));
-                System.out.println("nearHundred(90) = "+nearHundred(90));
-                System.out.println("nearHundred(89) = "+nearHundred(89));
-            } break;
-            case "posNeg": {
-                System.out.println("posNeg(1, -1, false) = "+posNeg(1, -1, false));
-                System.out.println("posNeg(-1, 1, false) = "+posNeg(-1, 1, false));
-                System.out.println("posNeg(-4, -5, true) = "+posNeg(-4, -5, true));
-                System.out.println("posNeg(-4, 5, false) = "+posNeg(-4, 5, false));
-            } break;
-            case "notString": {
-                System.out.println("notString(candy) = "+notString("candy"));
-                System.out.println("notString(x) = "+notString("x"));
-                System.out.println("notString(not bad) = "+notString("not bad"));
-                System.out.println("notString(not) = "+notString("not"));
-            } break;
-            case "missingChar": {
-                System.out.println("missingChar(\"kitten\", 1) = "+missingChar("kitten", 1));
-                System.out.println("missingChar(\"kitten\", 0) = "+missingChar("kitten", 0));
-                System.out.println("missingChar(\"kitten\", 4) = "+missingChar("kitten", 4));
-                System.out.println("missingChar(\"kitten\", 5) = "+missingChar("kitten", 5));
-            } break;
-            case "frontBack": {
-                System.out.println("frontBack(\"code\") = "+frontBack("code"));
-                System.out.println("frontBack(\"a\") = "+frontBack("a"));
-                System.out.println("frontBack(\"ab\") = "+frontBack("ab"));
-            } break;
-            case "front3": {
-                System.out.println("frontBack(\"Java\") = "+front3("Java"));
-                System.out.println("frontBack(\"Chocolate\") = "+front3("Chocolate"));
-                System.out.println("frontBack(\"abc\") = "+front3("abc"));
-            } break;
-            case "backAround": {
-                System.out.println("backAround(\"cat\") = "+backAround("cat"));
-                System.out.println("backAround(\"Hello\") = "+backAround("Hello"));
-                System.out.println("backAround(\"a\") = "+backAround("a"));
-            } break;
-            case "or35": {
-                System.out.println("or35() = "+or35(3));
-                System.out.println("or35() = "+or35(10));
-                System.out.println("or35() = "+or35(8));
-            } break;
-            default: System.out.println("No method with that name.");
-            case "front22": {
-                System.out.println("front22(\"kitten\") = "+front22("kitten"));
-                System.out.println("front22(\"Ha\") = "+front22("Ha"));
-                System.out.println("front22(\"abc\") = "+front22("abc"));
-                System.out.println("front22(\"a\") = "+front22("a"));
-                System.out.println("front22(\"\") = "+front22(""));
-            } break;
-            case "startHi": {
-                System.out.println("startHi(\"hi there\") = "+startHi("hi there"));
-                System.out.println("startHi(\"hi\") = "+startHi("hi"));
-                System.out.println("startHi(\"hello hi\") = "+startHi("hello hi"));
-            } break;
-            case "icyHot": {
-                System.out.println("icyHot(120, -1) = "+icyHot(120, -1));
-                System.out.println("icyHot(-1, 120) = "+icyHot(-1, 120));
-                System.out.println("icyHot(2, 120) = "+icyHot(2, 120));
-            } break;
-        }
-    }
-    
     private boolean sleepIn (boolean weekday, boolean vacation){
         //The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation.
         //We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
@@ -263,7 +176,168 @@ public class Warmup_1 {
         return (temp1<0 && temp2>100) || (temp1>100 && temp2<0);
     }
     
+    private boolean in1020(int a, int b) {
+        //Given 2 int values, return true if either of them is in the range 10..20 inclusive.
+        return (a>=10 && a<=20) || (b>=10 && b<=20);
+    }
     
+    private boolean hasTeen(int a, int b, int c) {
+        //We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
+        return (a>=13 && a<=19) || (b>=13 && b<=19) || (c>=13 && c<=19);
+    }
+    
+    private boolean loneTeen(int a, int b) {
+        //We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
+        boolean aTeen = (a>=13 && a<=19);
+        boolean bTeen = (b>=13 && b<=19);
+        return (aTeen && !bTeen) || (!aTeen && bTeen);
+    }
+    
+    private String delDel(String str) {
+        //Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+        if(str.length()>3 && str.substring(1, 4).equals("del")){
+            return str.substring(0,1)+str.substring(4);
+        }
+         return str;
+    }
+    
+    private boolean mixStart(String str) {
+        //Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+        if(str.length()<3){
+            return false;
+        }
+        return str.substring(1,3).equals("ix");
+    }
+    
+    private String startOz(String str) {
+        //Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' 
+        //and include the second only if it is 'z', so "ozymandias" yields "oz".
+        String result = "";
+        if(str.length()>=1 && str.charAt(0) == 'o'){
+            result += str.charAt(0);
+        }
+        if(str.length()>=2 && str.charAt(1) == 'z'){
+            result += str.charAt(1);
+        }
+        return result;
+    }
+    
+    private void testfunctions (String method){
+        switch(method){
+            case "sumDouble": {
+                System.out.println("sumDouble: 1 + 2 = "+ sumDouble(1, 2));
+                System.out.println("sumDouble: 3 + 2 = "+ sumDouble(3, 2));
+                System.out.println("sumDouble: 2 + 2 = "+ sumDouble(2, 2));                
+            } break;
+            case "diff21": {
+                System.out.println("diff21(2) = "+ diff21(2));
+                System.out.println("diff21(11) = "+ diff21(11));
+                System.out.println("diff21(0) = "+ diff21(0));
+                System.out.println("diff21(0) = "+ diff21(30));
+            } break;
+            case "parrotTrouble": {
+                System.out.println("parrotTrouble(true, 6) = "+parrotTrouble(true, 6));
+                System.out.println("parrotTrouble(true, 7) = "+parrotTrouble(true, 7));
+                System.out.println("parrotTrouble(false, 6) = "+parrotTrouble(false, 6));
+            } break;
+            case "makes10": {
+                System.out.println("makes10(9, 10) = "+makes10(9, 10));
+                System.out.println("makes10(9, 9) = "+makes10(9, 9));
+                System.out.println("makes10(1, 9) = "+makes10(1, 9));
+            } break;
+            case "nearHundred": {
+                System.out.println("nearHundred(93) = "+nearHundred(93));
+                System.out.println("nearHundred(90) = "+nearHundred(90));
+                System.out.println("nearHundred(89) = "+nearHundred(89));
+            } break;
+            case "posNeg": {
+                System.out.println("posNeg(1, -1, false) = "+posNeg(1, -1, false));
+                System.out.println("posNeg(-1, 1, false) = "+posNeg(-1, 1, false));
+                System.out.println("posNeg(-4, -5, true) = "+posNeg(-4, -5, true));
+                System.out.println("posNeg(-4, 5, false) = "+posNeg(-4, 5, false));
+            } break;
+            case "notString": {
+                System.out.println("notString(candy) = "+notString("candy"));
+                System.out.println("notString(x) = "+notString("x"));
+                System.out.println("notString(not bad) = "+notString("not bad"));
+                System.out.println("notString(not) = "+notString("not"));
+            } break;
+            case "missingChar": {
+                System.out.println("missingChar(\"kitten\", 1) = "+missingChar("kitten", 1));
+                System.out.println("missingChar(\"kitten\", 0) = "+missingChar("kitten", 0));
+                System.out.println("missingChar(\"kitten\", 4) = "+missingChar("kitten", 4));
+                System.out.println("missingChar(\"kitten\", 5) = "+missingChar("kitten", 5));
+            } break;
+            case "frontBack": {
+                System.out.println("frontBack(\"code\") = "+frontBack("code"));
+                System.out.println("frontBack(\"a\") = "+frontBack("a"));
+                System.out.println("frontBack(\"ab\") = "+frontBack("ab"));
+            } break;
+            case "front3": {
+                System.out.println("frontBack(\"Java\") = "+front3("Java"));
+                System.out.println("frontBack(\"Chocolate\") = "+front3("Chocolate"));
+                System.out.println("frontBack(\"abc\") = "+front3("abc"));
+            } break;
+            case "backAround": {
+                System.out.println("backAround(\"cat\") = "+backAround("cat"));
+                System.out.println("backAround(\"Hello\") = "+backAround("Hello"));
+                System.out.println("backAround(\"a\") = "+backAround("a"));
+            } break;
+            case "or35": {
+                System.out.println("or35() = "+or35(3));
+                System.out.println("or35() = "+or35(10));
+                System.out.println("or35() = "+or35(8));
+            } break;
+            default: System.out.println("No method with that name.");
+            case "front22": {
+                System.out.println("front22(\"kitten\") = "+front22("kitten"));
+                System.out.println("front22(\"Ha\") = "+front22("Ha"));
+                System.out.println("front22(\"abc\") = "+front22("abc"));
+                System.out.println("front22(\"a\") = "+front22("a"));
+                System.out.println("front22(\"\") = "+front22(""));
+            } break;
+            case "startHi": {
+                System.out.println("startHi(\"hi there\") = "+startHi("hi there"));
+                System.out.println("startHi(\"hi\") = "+startHi("hi"));
+                System.out.println("startHi(\"hello hi\") = "+startHi("hello hi"));
+            } break;
+            case "icyHot": {
+                System.out.println("icyHot(120, -1) = "+icyHot(120, -1));
+                System.out.println("icyHot(-1, 120) = "+icyHot(-1, 120));
+                System.out.println("icyHot(2, 120) = "+icyHot(2, 120));
+            } break;
+            case "in1020": {
+                System.out.println("in1020(12, 99) = "+in1020(12, 99));
+                System.out.println("in1020(21, 12) = "+in1020(21, 12));
+                System.out.println("in1020(8, 99) = "+in1020(8, 99));
+            } break;
+            case "hasTeen": {
+                System.out.println("hasTeen(13, 20, 10) = "+hasTeen(13, 20, 10));
+                System.out.println("hasTeen(20, 19, 10) = "+hasTeen(20, 19, 10));
+                System.out.println("hasTeen(20, 10, 13) = "+hasTeen(20, 10, 13));
+            } break;
+            case "loneTeen": {
+                System.out.println("loneTeen(13, 99) = "+loneTeen(13, 99));
+                System.out.println("loneTeen(21, 19) = "+loneTeen(21, 19));
+                System.out.println("loneTeen(13, 13) = "+loneTeen(13, 13));
+            } break;
+            case "delDel": {
+                System.out.println("delDel(\"adelbc\") = "+delDel("adelbc"));
+                System.out.println("delDel(\"adelHello\") = "+delDel("adelHello"));
+                System.out.println("delDel(\"adedbc\") = "+delDel("adedbc"));
+            } break;
+            case "mixStart": {
+                System.out.println("mixStart(\"mix snacks\") = "+mixStart("mix snacks"));
+                System.out.println("mixStart(\"pix snacks\") = "+mixStart("pix snacks"));
+                System.out.println("mixStart(\"piz snacks\") = "+mixStart("piz snacks"));
+            } break;
+            case "startOz": {
+                System.out.println("startOz(\"ozymandias\") = "+startOz("ozymandias"));
+                System.out.println("startOz(\"bzoo\") = "+startOz("bzoo"));
+                System.out.println("startOz(\"oxx\") = "+startOz("oxx"));
+            } break;
+        }
+    }
     
     /**
      * @param args the command line arguments
@@ -288,7 +362,13 @@ public class Warmup_1 {
         //misEjercicios.testfunctions("or35");
         //misEjercicios.testfunctions("front22");
         //misEjercicios.testfunctions("startHi");
-        misEjercicios.testfunctions("icyHot");
+        //misEjercicios.testfunctions("icyHot");
+        //misEjercicios.testfunctions("in1020");
+        //misEjercicios.testfunctions("hasTeen");
+        //misEjercicios.testfunctions("loneTeen");
+        //misEjercicios.testfunctions("delDel");
+        //misEjercicios.testfunctions("mixStart");
+        misEjercicios.testfunctions("startOz");
         
         
         
