@@ -10,7 +10,9 @@ package codigo;
  * @author alejandroserranol
  */
 public class Warmup_1 {
-
+    
+    //Exercises from: https://codingbat.com/java
+    
     private Boolean[][]  boolArray = {{true, true},{true, false}, {false, true}, {false, false}};
     
     private void testFunction2BooleanParameters (String method){
@@ -222,6 +224,98 @@ public class Warmup_1 {
         return result;
     }
     
+    private int intMax(int a, int b, int c) {
+        //Given three int values, a b c, return the largest.
+        if(a>b){
+            if(b<c){
+                if(a<c){
+                    return c;
+                } 
+            }
+        } else {
+            if(b>c){
+                return b;
+            } else {
+                return c;
+            }
+        }
+        return a;
+    }
+    
+    private int close10(int a, int b) {
+        //Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie.
+        //Note that Math.abs(n) returns the absolute value of a number.
+        if(Math.abs(a-10)>Math.abs(b-10)){
+            return b;
+        } else if(Math.abs(a-10)<Math.abs(b-10)) {
+            return a;
+        }        
+        return 0;
+    }
+    
+    private boolean in3050(int a, int b) {
+        //Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both in the range 40..50 inclusive.
+        boolean firstRange = (a>= 30 && a <= 40) && (b>= 30 && b <= 40);
+        boolean secondRange = (a>= 40 && a <= 50) && (b>= 40 && b <= 50);
+        return firstRange || secondRange;
+    }
+    
+    private int max1020(int a, int b) {
+        //Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range.
+        boolean isAInTheRange = a>=10 && a<=20;
+        boolean isBInTheRange = b>=10 && b<=20;        
+        if(isAInTheRange && isBInTheRange){
+            if(a>b){
+                return a;
+            } else {
+                return b;
+            }
+        } else if (!isAInTheRange && isBInTheRange) {
+            return b;
+        } else if (isAInTheRange && !isBInTheRange) {
+            return a;
+        }
+        return 0;
+    }
+    
+    private boolean stringE(String str) {
+        //Return true if the given string contains between 1 and 3 'e' chars.
+        int countE = 0;
+        for(int i=0; i<str.length(); i++){
+            if(str.charAt(i)=='e'){
+                countE++;
+            }
+        }
+        return countE>=1 && countE<=3;
+    }
+    
+    private boolean lastDigit(int a, int b) {
+        //Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57.
+        //Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
+        return (a%10 == b%10);
+    }
+    
+    private String endUp(String str) {
+        //Given a string, return a new string where the last 3 chars are now in upper case. If the string has less than 3 chars, uppercase whatever is there.
+        //Note that str.toUpperCase() returns the uppercase version of a string.
+        if(str.length()<=3){
+            return str.toUpperCase();
+        }
+        return str.substring(0, str.length()-3)+str.substring(str.length()-3).toUpperCase();
+    }
+    
+    private String everyNth(String str, int n) {
+        //Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string.
+        //So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
+        String result = "";
+        for(int i=0; i<str.length(); i++){
+            if(i%n==0){
+                result += str.charAt(i);
+            }
+        }
+        return result;
+    }
+    
     private void testfunctions (String method){
         switch(method){
             case "sumDouble": {
@@ -336,6 +430,47 @@ public class Warmup_1 {
                 System.out.println("startOz(\"bzoo\") = "+startOz("bzoo"));
                 System.out.println("startOz(\"oxx\") = "+startOz("oxx"));
             } break;
+            case "intMax": {
+                System.out.println("intMax(1, 2, 3) = "+intMax(1, 2, 3));
+                System.out.println("intMax(1, 3, 2) = "+intMax(1, 3, 2));
+                System.out.println("intMax(3, 2, 1) = "+intMax(3, 2, 1));
+                System.out.println("intMax(6, 2, 6) = "+intMax(6, 2, 6));
+            } break;
+            case "close10": {
+                System.out.println("intMax(8, 13) = "+close10(8, 13));
+                System.out.println("intMax(13, 8) = "+close10(13, 8));
+                System.out.println("intMax(13, 7) = "+close10(13, 7));
+            } break;
+            case "in3050": {
+                System.out.println("in3050(30, 31) = "+in3050(30, 31));
+                System.out.println("in3050(30, 41) = "+in3050(30, 41));
+                System.out.println("in3050(40, 50) = "+in3050(40, 50));
+            } break;
+            case "max1020": {
+                System.out.println("max1020(11, 19) = "+max1020(11, 19));
+                System.out.println("max1020(19, 11) = "+max1020(19, 11));
+                System.out.println("max1020(11, 9) = "+max1020(11, 9));
+            } break;
+            case "stringE": {
+                System.out.println("stringE(\"Hello\") = "+stringE("Hello"));
+                System.out.println("stringE(\"Heelle\") = "+stringE("Heelle"));
+                System.out.println("stringE(\"Heelele\") = "+stringE("Heelele"));
+            } break;
+            case "lastDigit": {
+                System.out.println("lastDigit(7, 17) = "+lastDigit(7, 17));
+                System.out.println("lastDigit(6, 17) = "+lastDigit(6, 17));
+                System.out.println("lastDigit(3, 113) = "+lastDigit(3, 113));
+            } break;
+            case "endUp": {
+                System.out.println("lastDigit(\"Hello\") = "+endUp("Hello"));
+                System.out.println("lastDigit(\"hi there\") = "+endUp("hi there"));
+                System.out.println("lastDigit(\"hi\") = "+endUp("hi"));
+            } break;
+            case "everyNth": {
+                System.out.println("everyNth(\"Miracle\", 2) = "+everyNth("Miracle", 2));
+                System.out.println("everyNth(\"abcdefg\", 2) = "+everyNth("abcdefg", 2));
+                System.out.println("everyNth(\"abcdefg\", 3) = "+everyNth("abcdefg", 3));
+            } break;
         }
     }
     
@@ -368,7 +503,15 @@ public class Warmup_1 {
         //misEjercicios.testfunctions("loneTeen");
         //misEjercicios.testfunctions("delDel");
         //misEjercicios.testfunctions("mixStart");
-        misEjercicios.testfunctions("startOz");
+        //misEjercicios.testfunctions("startOz");
+        //misEjercicios.testfunctions("intMax");
+        //misEjercicios.testfunctions("close10");
+        //misEjercicios.testfunctions("in3050");
+        //misEjercicios.testfunctions("max1020");
+        //misEjercicios.testfunctions("stringE");
+        //misEjercicios.testfunctions("lastDigit");
+        //misEjercicios.testfunctions("endUp");
+        misEjercicios.testfunctions("everyNth");
         
         
         
