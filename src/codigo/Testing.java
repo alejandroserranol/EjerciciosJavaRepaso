@@ -23,9 +23,10 @@ public class Testing {
      */
     public static void main(String[] args) {
         Warmup1_TestFunctions w1 = new Warmup1_TestFunctions();
-        w1.testWarmup_1functions();
+        //w1.testWarmup_1functions();
         
-        
+        Warmup2_TestFunctions w2 = new Warmup2_TestFunctions();
+        w2.testWarmup_2functions();
         
         
         

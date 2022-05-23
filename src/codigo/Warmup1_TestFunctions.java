@@ -119,7 +119,6 @@ public class Warmup1_TestFunctions  extends Warmup1_Exercises {
                 System.out.println("or35() = "+or35(10));
                 System.out.println("or35() = "+or35(8));
             } break;
-            default: System.out.println("No method with that name.");
             case "front22": {
                 System.out.println("front22(\"kitten\") = "+front22("kitten"));
                 System.out.println("front22(\"Ha\") = "+front22("Ha"));
@@ -208,41 +207,42 @@ public class Warmup1_TestFunctions  extends Warmup1_Exercises {
                 System.out.println("everyNth(\"abcdefg\", 2) = "+everyNth("abcdefg", 2));
                 System.out.println("everyNth(\"abcdefg\", 3) = "+everyNth("abcdefg", 3));
             } break;
+            default: System.out.println("No method with that name.");
         }
     }
     
     public void testWarmup_1functions (){
-        testFunction2BooleanParameters("sleepIn");
-        testFunction2BooleanParameters("monkeyTrouble");
-        
-        testFunctions("sumDouble");
-        testFunctions("diff21");
-        testFunctions("parrotTrouble");
-        testFunctions("makes10");
-        testFunctions("nearHundred");
-        testFunctions("posNeg");
-        testFunctions("notString");
-        testFunctions("missingChar");
-        testFunctions("frontBack");
-        testFunctions("front3");
-        testFunctions("backAround");
-        testFunctions("or35");
-        testFunctions("front22");
-        testFunctions("startHi");
-        testFunctions("icyHot");
-        testFunctions("in1020");
-        testFunctions("hasTeen");
-        testFunctions("loneTeen");
-        testFunctions("delDel");
-        testFunctions("mixStart");
-        testFunctions("startOz");
-        testFunctions("intMax");
-        testFunctions("close10");
-        testFunctions("in3050");
-        testFunctions("max1020");
-        testFunctions("stringE");
-        testFunctions("lastDigit");
-        testFunctions("endUp");
+//        testFunction2BooleanParameters("sleepIn");
+//        testFunction2BooleanParameters("monkeyTrouble");
+//        
+//        testFunctions("sumDouble");
+//        testFunctions("diff21");
+//        testFunctions("parrotTrouble");
+//        testFunctions("makes10");
+//        testFunctions("nearHundred");
+//        testFunctions("posNeg");
+//        testFunctions("notString");
+//        testFunctions("missingChar");
+//        testFunctions("frontBack");
+//        testFunctions("front3");
+//        testFunctions("backAround");
+//        testFunctions("or35");
+//        testFunctions("front22");
+//        testFunctions("startHi");
+//        testFunctions("icyHot");
+//        testFunctions("in1020");
+//        testFunctions("hasTeen");
+//        testFunctions("loneTeen");
+//        testFunctions("delDel");
+//        testFunctions("mixStart");
+//        testFunctions("startOz");
+//        testFunctions("intMax");
+//        testFunctions("close10");
+//        testFunctions("in3050");
+//        testFunctions("max1020");
+//        testFunctions("stringE");
+//        testFunctions("lastDigit");
+//        testFunctions("endUp");
         testFunctions("everyNth");
     }
     
