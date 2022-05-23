@@ -44,6 +44,16 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
                 System.out.println("stringBits(\"Hello Kitten\") = "+stringBits("Hello Kitten"));
                 System.out.println("stringBits(\"Hellok itten\") = "+stringBits("Hellok itten"));
             } break;
+            case "stringSplosion": {
+                System.out.println("stringBits(\"Code\") = "+stringSplosion("Code"));
+                System.out.println("stringBits(\"abc\") = "+stringSplosion("abc"));
+                System.out.println("stringBits(\"ab\") = "+stringSplosion("ab"));
+            } break;
+            case "last2": {
+                System.out.println("last2(\"hixxhi\") = "+last2("hixxhi"));
+                System.out.println("last2(\"xaxxaxaxx\") = "+last2("xaxxaxaxx"));
+                System.out.println("last2(\"axxxaaxx\") = "+last2("axxxaaxx"));
+            } break;
             default: System.out.println("No method with that name.");
         }
     }
@@ -54,6 +64,8 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
 //        testFunctions("frontTimes");
 //        testFunctions("countXX");
 //        testFunctions("doubleX");
-        testFunctions("stringBits");
+//        testFunctions("stringBits");
+//        testFunctions("stringSplosion");
+        testFunctions("last2");
     }
 }
