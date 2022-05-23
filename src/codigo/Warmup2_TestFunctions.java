@@ -54,6 +54,29 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
                 System.out.println("last2(\"xaxxaxaxx\") = "+last2("xaxxaxaxx"));
                 System.out.println("last2(\"axxxaaxx\") = "+last2("axxxaaxx"));
             } break;
+            case "arrayCount9": {
+                System.out.println("arrayCount9(1, 2, 9) = "+arrayCount9(new int[] {1, 2, 9}));
+                System.out.println("arrayCount9(1, 9, 9) = "+arrayCount9(new int[] {1, 9, 9}));
+                System.out.println("arrayCount9(1, 9, 9, 3, 9) = "+arrayCount9(new int[] {1, 9, 9, 3, 9}));
+            } break;
+            case "arrayFront9": {
+                System.out.println("arrayFront9(1, 2, 9, 3, 4) = "+arrayFront9(new int[] {1, 2, 9, 3, 4}));
+                System.out.println("arrayFront9(1, 2, 3, 4, 9) = "+arrayFront9(new int[] {1, 2, 3, 4, 9}));
+                System.out.println("arrayFront9(1, 2, 3, 4, 5) = "+arrayFront9(new int[] {1, 2, 3, 4, 5}));
+            } break;
+            case "array123": {
+                System.out.println("array123(1, 1, 2, 3, 1) = "+array123(new int[] {1, 1, 2, 3, 1}));
+                System.out.println("array123(1, 1, 2, 4, 1) = "+array123(new int[] {1, 1, 2, 4, 1}));
+                System.out.println("array123(1, 1, 2, 1, 2, 3) = "+array123(new int[] {1, 1, 2, 1, 2, 3}));
+            } break;
+            case "stringMatch": {
+                System.out.println("stringMatch(\"xxcaazz\", \"xxbaaz\") = "+stringMatch("xxcaazz", "xxbaaz"));
+                System.out.println("stringMatch(\"abc\", \"abc\") = "+stringMatch("abc", "abc"));
+                System.out.println("stringMatch(\"abc\", \"axc\") = "+stringMatch("abc", "axc"));
+                System.out.println("stringMatch(\"aabbccdd\", \"abbbxxd\") = "+stringMatch("aabbccdd", "abbbxxd"));
+                System.out.println("stringMatch(\"aaxxaaxx\", \"iaxxai\") = "+stringMatch("aaxxaaxx", "iaxxai"));
+                System.out.println("stringMatch(\"iaxxai\", \"aaxxaaxx\") = "+stringMatch("iaxxai", "aaxxaaxx"));
+            } break;
             default: System.out.println("No method with that name.");
         }
     }
@@ -66,6 +89,10 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
 //        testFunctions("doubleX");
 //        testFunctions("stringBits");
 //        testFunctions("stringSplosion");
-        testFunctions("last2");
+//        testFunctions("last2");
+//        testFunctions("arrayCount9");
+//       testFunctions("arrayFront9");
+//        testFunctions("array123");
+        testFunctions("stringMatch");
     }
 }

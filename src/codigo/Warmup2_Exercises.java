@@ -99,4 +99,57 @@ public class Warmup2_Exercises {
         return count;
     }
     
+    public int arrayCount9(int[] nums) {
+        //Given an array of ints, return the number of 9's in the array.
+        int count = 0;
+        for(int num : nums){
+            if(num == 9){
+                count++;
+            }
+        }
+        return count;
+    }    
+    
+    public boolean arrayFront9(int[] nums) {
+        //Given an array of ints, return true if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+        for(int i=0; i<nums.length; i++){
+            if(i<4 && nums[i]==9){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean array123(int[] nums) {
+        //Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+        for (int i=0; i<nums.length-2; i++) {
+            if(nums[i]==1 && nums[i+1]==2 && nums[i+2]==3){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public int stringMatch(String a, String b) {
+        //Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring.
+        //So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+        int count = 0;
+        String substringA = "";
+        String substringB = "";
+        if(b.length()<a.length()){
+            String temp = a;
+            a = b;
+            b = temp;
+        }
+        
+        for (int i= 0; i<a.length()-1; i++) {
+            substringA = a.substring(i, i+2);
+            substringB = b.substring(i, i+2);
+            if(substringA.equalsIgnoreCase(substringB)){
+                count++;
+            }
+        }
+        return count;
+    }
+    
 }
