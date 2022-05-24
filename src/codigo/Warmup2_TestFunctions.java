@@ -108,7 +108,7 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
                 System.out.println("has271(2, 7, 1) = "+has271(new int[] {2, 7, 1}));
                 System.out.println("has271(2, 7, 4) = "+has271(new int[] {2, 7, 4}));
             } break;
-            default: System.out.println("No method with that name.");
+            default: System.out.println("No method with that name."); break;
         }
     }
     

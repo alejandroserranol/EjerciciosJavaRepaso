@@ -207,7 +207,7 @@ public class Warmup1_TestFunctions  extends Warmup1_Exercises {
                 System.out.println("everyNth(\"abcdefg\", 2) = "+everyNth("abcdefg", 2));
                 System.out.println("everyNth(\"abcdefg\", 3) = "+everyNth("abcdefg", 3));
             } break;
-            default: System.out.println("No method with that name.");
+            default: System.out.println("No method with that name."); break;
         }
     }
     
