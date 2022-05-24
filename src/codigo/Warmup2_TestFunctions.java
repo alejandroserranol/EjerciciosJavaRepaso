@@ -77,6 +77,37 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
                 System.out.println("stringMatch(\"aaxxaaxx\", \"iaxxai\") = "+stringMatch("aaxxaaxx", "iaxxai"));
                 System.out.println("stringMatch(\"iaxxai\", \"aaxxaaxx\") = "+stringMatch("iaxxai", "aaxxaaxx"));
             } break;
+            case "stringX": {
+                System.out.println("stringX(\"xxHxix\") = "+stringX("xxHxix"));
+                System.out.println("stringX(\"abxxxcd\") = "+stringX("abxxxcd"));
+                System.out.println("stringX(\"xabxxxcdx\") = "+stringX("xabxxxcdx"));
+            } break;
+            case "altPairs": {
+                System.out.println("altPairs(\"kitten\") = "+altPairs("kitten"));
+                System.out.println("altPairs(\"Chocolate\") = "+altPairs("Chocolate"));
+                System.out.println("altPairs(\"CodingHorror\") = "+altPairs("CodingHorror"));
+            } break;
+            case "stringYak": {
+                System.out.println("stringYak(\"yakpak\") = "+stringYak("yakpak"));
+                System.out.println("stringYak(\"pakyak\") = "+stringYak("pakyak"));
+                System.out.println("stringYak(\"yak123ya\") = "+stringYak("yak123ya"));
+            } break;
+            case "array667": {
+                System.out.println("array667(6, 6, 2) = "+array667(new int[] {6, 6, 2}));
+                System.out.println("array667(6, 6, 2, 6) = "+array667(new int[] {6, 6, 2, 6}));
+                System.out.println("array667(6, 7, 2, 6) = "+array667(new int[] {6, 7, 2, 6}));
+            } break;
+            case "noTriples": {
+                System.out.println("noTriples(1, 1, 2, 2, 1) = "+noTriples(new int[] {1, 1, 2, 2, 1}));
+                System.out.println("noTriples(1, 1, 2, 2, 2, 1) = "+noTriples(new int[] {1, 1, 2, 2, 2, 1}));
+                System.out.println("noTriples(1, 1, 1, 2, 2, 2, 1) = "+noTriples(new int[] {1, 1, 1, 2, 2, 2, 1}));
+            } break;
+            case "has271": {
+                System.out.println("has271(1, 2, 7, 1) = "+has271(new int[] {1, 2, 7, 1}));
+                System.out.println("has271(1, 2, 8, 1) = "+has271(new int[] {1, 2, 8, 1}));
+                System.out.println("has271(2, 7, 1) = "+has271(new int[] {2, 7, 1}));
+                System.out.println("has271(2, 7, 4) = "+has271(new int[] {2, 7, 4}));
+            } break;
             default: System.out.println("No method with that name.");
         }
     }
@@ -93,6 +124,12 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
 //        testFunctions("arrayCount9");
 //       testFunctions("arrayFront9");
 //        testFunctions("array123");
-        testFunctions("stringMatch");
+//        testFunctions("stringMatch");
+//        testFunctions("stringX");
+//        testFunctions("altPairs");
+//        testFunctions("stringYak");
+//        testFunctions("array667");
+//        testFunctions("noTriples");
+        testFunctions("has271");
     }
 }
