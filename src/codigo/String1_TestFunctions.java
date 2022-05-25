@@ -94,6 +94,38 @@ public class String1_TestFunctions extends String1_Exercises {
                 System.out.println("endsLy(\"y\") = "+endsLy("y"));
                 System.out.println("endsLy(\"oddy\") = "+endsLy("oddy"));
             } break;
+            case "nTwice": {
+                System.out.println("nTwice(\"Hello\", 2) = "+nTwice("Hello", 2));
+                System.out.println("nTwice(\"Chocolate\", 3) = "+nTwice("Chocolate", 3));
+                System.out.println("nTwice(\"Chocolate\", 1) = "+nTwice("Chocolate", 1));
+            } break;
+            case "twoChar": {
+                System.out.println("twoChar(\"java\", 0) = "+twoChar("java", 0));
+                System.out.println("twoChar(\"java\", 2) = "+twoChar("java", 2));
+                System.out.println("twoChar(\"java\", 3) = "+twoChar("java", 3));
+                System.out.println("twoChar(\"java\", -1) = "+twoChar("java", -1));
+            } break;
+            case "middleThree": {
+                System.out.println("middleThree(\"Candy\") = "+middleThree("Candy"));
+                System.out.println("middleThree(\"and\") = "+middleThree("and"));
+                System.out.println("middleThree(\"solving\") = "+middleThree("solving"));
+            } break;
+            case "hasBad": {
+                System.out.println("hasBad(\"badxx\") = "+hasBad("badxx"));
+                System.out.println("hasBad(\"xbadxx\") = "+hasBad("xbadxx"));
+                System.out.println("hasBad(\"xxbadxx\") = "+hasBad("xxbadxx"));
+            } break;
+            case "atFirst": {
+                System.out.println("atFirst(\"hello\") = "+atFirst("hello"));
+                System.out.println("atFirst(\"hi\") = "+atFirst("hi"));
+                System.out.println("atFirst(\"h\") = "+atFirst("h"));
+                System.out.println("atFirst(\"\") = "+atFirst(""));
+            } break;
+            case "lastChars": {
+                System.out.println("lastChars(\"last\", \"chars\") = "+lastChars("last", "chars"));
+                System.out.println("lastChars(\"yo\", \"java\") = "+lastChars("yo", "java"));
+                System.out.println("lastChars(\"hi\", \"\") = "+lastChars("hi", ""));
+            } break;
             default: System.out.println("No method with that name."); break;
         }
     }
@@ -115,6 +147,12 @@ public class String1_TestFunctions extends String1_Exercises {
 //        testFunctions("theEnd");
 //        testFunctions("withouEnd2");
 //        testFunctions("middleTwo");
-        testFunctions("endsLy");
+//        testFunctions("endsLy");
+//        testFunctions("nTwice");
+//        testFunctions("twoChar");
+//        testFunctions("middleThree");
+//        testFunctions("hasBad");
+//        testFunctions("atFirst");
+        testFunctions("lastChars");
     }
 }

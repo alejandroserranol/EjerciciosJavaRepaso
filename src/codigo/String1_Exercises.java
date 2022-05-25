@@ -119,5 +119,64 @@ public class String1_Exercises {
         return (str.length()>=2 && (str.substring(str.length()-2)).equals("ly")) ? true : false;
     }
     
+    public String nTwice(String str, int n) {
+        //Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.
+        return str.substring(0,n)+str.substring(str.length()-n);
+    }
+    
+    public String twoChar(String str, int index) {
+        //Given a string and an index, return a string length 2 starting at the given index.
+        //If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
+        return (index>=0 && index <= str.length()-2) ? str.substring(index, index+2) : str.substring(0,2);
+    }
+    
+    public String middleThree(String str) {
+        //Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". The string length will be at least 3.
+        return (str.length()>3) ? str.substring(str.length()/2-1,str.length()/2+2) : str;
+    }
+    
+    public boolean hasBad(String str) {
+        //Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with "badxxx" or "xbadxx" but not "xxbadxx".
+        //The string may be any length, including 0. Note: use .equals() to compare 2 strings.
+        if(str.length()>2 && str.substring(0, 3).equals("bad")) {
+            return true;
+        }
+        if(str.length()>3 && str.substring(1, 4).equals("bad")) {
+            return true;
+        }
+        return false;
+    }
+    
+    public String atFirst(String str) {
+        //Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use '@' for the missing chars.
+        String result = "";
+        if(str.length()<2){
+            result += str;
+            while (result.length()<2) {
+                result += "@";
+            }
+        } else {
+            result += str.substring(0,2);
+        }
+        return result;
+    }
+    
+    public String lastChars(String a, String b) {
+        //Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and "java" yields "ya".
+        //If either string is length 0, use '@' for its missing char.
+        String result = "";
+        if(a.length()<1){
+            result += "@";
+        } else {
+            result += a.substring(0, 1);
+        }
+        if(b.length()<1){
+            result += "@";
+        } else {
+            result += b.substring(b.length()-1);
+        }
+        return result;
+    }
+    
     
 }
