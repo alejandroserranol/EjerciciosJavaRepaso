@@ -151,6 +151,38 @@ public class String1_TestFunctions extends String1_Exercises {
                 System.out.println("minCat(\"Hello\", \"java\") = "+minCat("Hello", "java"));
                 System.out.println("minCat(\"java\", \"Hello\") = "+minCat("java", "Hello"));
             } break;
+            case "extraFront": {
+                System.out.println("extraFront(\"Hello\") = "+extraFront("Hello"));
+                System.out.println("extraFront(\"ab\") = "+extraFront("ab"));
+                System.out.println("extraFront(\"H\") = "+extraFront("H"));
+            } break;
+            case "without2": {
+                System.out.println("without2(\"HelloHe\") = "+without2("HelloHe"));
+                System.out.println("without2(\"HelloHi\") = "+without2("HelloHi"));
+                System.out.println("without2(\"Hi\") = "+without2("Hi"));
+            } break;
+            case "deFront": {
+                System.out.println("deFront(\"Hello\") = "+deFront("Hello"));
+                System.out.println("deFront(\"java\") = "+deFront("java"));
+                System.out.println("deFront(\"away\") = "+deFront("away"));
+            } break;
+            case "startWord": {
+                System.out.println("startWord(\"hippo\", \"hi\") = "+startWord("hippo", "hi"));
+                System.out.println("startWord(\"hippo\", \"xip\") = "+startWord("hippo", "xip"));
+                System.out.println("startWord(\"hippo\", \"i\") = "+startWord("hippo", "i"));
+            } break;
+            case "withoutX": {
+                System.out.println("withoutX(\"xHix\") = "+withoutX("xHix"));
+                System.out.println("withoutX(\"xHi\") = "+withoutX("xHi"));
+                System.out.println("withoutX(\"Hxix\") = "+withoutX("Hxix"));
+                System.out.println("withoutX(\"xxHi\") = "+withoutX("xxHi"));
+                System.out.println("withoutX(\"xx\") = "+withoutX("xx"));
+            } break;
+            case "withoutX2": {
+                System.out.println("withoutX2(\"xHi\") = "+withoutX2("xHi"));
+                System.out.println("withoutX2(\"Hxi\") = "+withoutX2("Hxi"));
+                System.out.println("withoutX2(\"Hi\") = "+withoutX2("Hi"));
+            } break;
             default: System.out.println("No method with that name."); break;
         }
     }
@@ -183,6 +215,12 @@ public class String1_TestFunctions extends String1_Exercises {
 //        testFunctions("lastTwo");
 //        testFunctions("seeColor");
 //        testFunctions("frontAgain");
-        testFunctions("minCat");
+//        testFunctions("minCat");
+//        testFunctions("extraFront");
+//        testFunctions("without2");
+//        testFunctions("deFront");
+//        testFunctions("startWord");
+//        testFunctions("withoutX");
+        testFunctions("withoutX2");
     }
 }

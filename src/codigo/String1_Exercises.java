@@ -223,6 +223,84 @@ public class String1_Exercises {
             result += a + b.substring(b.length()-a.length());
         }
         return result;
-}
+    }
+    
+    public String extraFront(String str) {
+        //Given a string, return a new string made of 3 copies of the first 2 chars of the original string. The string may be any length.
+        //If there are fewer than 2 chars, use whatever is there.
+        return (str.length()<2) ? str+str+str : str.substring(0, 2)+str.substring(0, 2)+str.substring(0, 2);
+    }
+    
+    public String without2(String str) {
+        //Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so "HelloHe" yields "lloHe".
+        //The substring may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.
+        String result = "";
+        if(str.length()<2){
+            result += str;
+        } else if (str.length() > 2){
+            if(str.substring(0, 2).equals(str.substring(str.length()-2))){
+                result += str.substring(2);
+            } else {
+                result += str;
+            }
+        }
+        return result;
+    }
+    
+    public String deFront(String str) {    
+        //Given a string, return a version without the first 2 chars.
+        //Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length. Harder than it looks.
+        String front = "";
+        if(str.charAt(0) == 'a'){
+            front += str.charAt(0);
+        }
+        if(str.charAt(1) == 'b'){
+            front += str.charAt(1);
+        }
+        if(str.length() <= 2){
+            return front;
+        }
+        return front + str.substring(2);
+    }
+    
+    public String startWord(String str, String word) {
+        //Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front of the string,
+        //except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string.
+        //So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.
+        if(str.length()>= word.length() && str.substring(1, word.length()).equals(word.substring(1))){
+            return str.substring(0, word.length());
+        }
+        return "";
+    }
+    
+    public String withoutX(String str) {
+        //Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged.
+        String front = "";
+        String end = "";
+        
+        if(str.length()>0 && str.charAt(0) != 'x'){
+            front += str.substring(0,1);
+        }        
+        if(str.length()>1 && str.charAt(str.length()-1) != 'x'){
+            end += str.substring(str.length()-1);
+        }
+        if(str.length()<3){
+            return front + end;
+        }
+        return front + str.substring(1, str.length()-1)+end;
+    }
+    
+    public String withoutX2(String str) {
+        //Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars, and otherwise return the string unchanged.
+        //This is a little harder than it looks.
+        String front = "";
+        if(str.length() >=1 && str.charAt(0) != 'x'){
+            front += str.substring(0, 1);
+        }
+        if(str.length() >=2 && str.charAt(1) != 'x'){
+            front += str.substring(1, 2);
+        }
+        return (str.length()<3) ? front : front + str.substring(2);
+    }
     
 }
