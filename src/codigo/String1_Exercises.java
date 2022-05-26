@@ -178,5 +178,51 @@ public class String1_Exercises {
         return result;
     }
     
+    public String conCat(String a, String b) {
+        //Given two strings, append them together (known as "concatenation") and return the result.
+        //However, if the concatenation creates a double-char, then omit one of the chars, so "abc" and "cat" yields "abcat".
+        if(a.length()==0){
+            return b;
+        }
+        if (b.length()==0){
+            return a;
+        }
+        return (a.charAt(a.length()-1) == b.charAt(0)) ? a+b.substring(1) : a+b;
+    }
+    
+    public String lastTwo(String str) {
+        //Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign".
+        return (str.length()>1) ? str.substring(0,str.length()-2)+str.charAt(str.length()-1)+str.charAt(str.length()-2) : str;
+    }
+    
+    public String seeColor(String str) {
+        //Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
+        if(str.length()>3 && str.substring(0, 4).equals("blue")){
+            return str.substring(0, 4);
+        } else if (str.length()>2 && str.substring(0, 3).equals("red")){
+            return str.substring(0, 3);
+        }
+        return "";
+    }
+    
+    public boolean frontAgain(String str) {
+        //Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with "edited".
+        return (str.length()>1 && str.substring(0,2).equals(str.substring(str.length()-2))) ? true : false;
+    }
+    
+    public String minCat(String a, String b) {
+        //Given two strings, append them together (known as "concatenation") and return the result.
+        //However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string.
+        //So "Hello" and "Hi" yield "loHi". The strings may be any length.
+        String result = "";
+        if (a.length()==b.length()) {
+            result += a+b;            
+        } else if (a.length()>b.length()){
+            result += a.substring(a.length()-b.length()) + b;
+        } else {
+            result += a + b.substring(b.length()-a.length());
+        }
+        return result;
+}
     
 }

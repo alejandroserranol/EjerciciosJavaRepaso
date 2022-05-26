@@ -126,6 +126,31 @@ public class String1_TestFunctions extends String1_Exercises {
                 System.out.println("lastChars(\"yo\", \"java\") = "+lastChars("yo", "java"));
                 System.out.println("lastChars(\"hi\", \"\") = "+lastChars("hi", ""));
             } break;
+            case "conCat": {
+                System.out.println("conCat(\"abc\", \"cat\") = "+conCat("abc", "cat"));
+                System.out.println("conCat(\"dog\", \"cat\") = "+conCat("dog", "cat"));
+                System.out.println("conCat(\"abc\", \"\") = "+conCat("abc", ""));
+            } break;
+            case "lastTwo": {
+                System.out.println("lastTwo(\"coding\") = "+lastTwo("coding"));
+                System.out.println("lastTwo(\"cat\") = "+lastTwo("cat"));
+                System.out.println("lastTwo(\"ab\") = "+lastTwo("ab"));
+            } break;
+            case "seeColor": {
+                System.out.println("seeColor(\"redxx\") = "+seeColor("redxx"));
+                System.out.println("seeColor(\"xxred\") = "+seeColor("xxred"));
+                System.out.println("seeColor(\"blueTimes\") = "+seeColor("blueTimes"));
+            } break;
+            case "frontAgain": {
+                System.out.println("frontAgain(\"edited\") = "+frontAgain("edited"));
+                System.out.println("frontAgain(\"edit\") = "+frontAgain("edit"));
+                System.out.println("frontAgain(\"ed\") = "+frontAgain("ed"));
+            } break;
+            case "minCat": {
+                System.out.println("minCat(\"Hello\", \"Hi\") = "+minCat("Hello", "Hi"));
+                System.out.println("minCat(\"Hello\", \"java\") = "+minCat("Hello", "java"));
+                System.out.println("minCat(\"java\", \"Hello\") = "+minCat("java", "Hello"));
+            } break;
             default: System.out.println("No method with that name."); break;
         }
     }
@@ -153,6 +178,11 @@ public class String1_TestFunctions extends String1_Exercises {
 //        testFunctions("middleThree");
 //        testFunctions("hasBad");
 //        testFunctions("atFirst");
-        testFunctions("lastChars");
+//        testFunctions("lastChars");
+//        testFunctions("conCat");
+//        testFunctions("lastTwo");
+//        testFunctions("seeColor");
+//        testFunctions("frontAgain");
+        testFunctions("minCat");
     }
 }
