@@ -55,19 +55,19 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
                 System.out.println("last2(\"axxxaaxx\") = "+last2("axxxaaxx"));
             } break;
             case "arrayCount9": {
-                System.out.println("arrayCount9(1, 2, 9) = "+arrayCount9(new int[] {1, 2, 9}));
-                System.out.println("arrayCount9(1, 9, 9) = "+arrayCount9(new int[] {1, 9, 9}));
-                System.out.println("arrayCount9(1, 9, 9, 3, 9) = "+arrayCount9(new int[] {1, 9, 9, 3, 9}));
+                System.out.println("arrayCount9([1, 2, 9]) = "+arrayCount9(new int[] {1, 2, 9}));
+                System.out.println("arrayCount9([1, 9, 9]) = "+arrayCount9(new int[] {1, 9, 9}));
+                System.out.println("arrayCount9([1, 9, 9, 3, 9]) = "+arrayCount9(new int[] {1, 9, 9, 3, 9}));
             } break;
             case "arrayFront9": {
-                System.out.println("arrayFront9(1, 2, 9, 3, 4) = "+arrayFront9(new int[] {1, 2, 9, 3, 4}));
-                System.out.println("arrayFront9(1, 2, 3, 4, 9) = "+arrayFront9(new int[] {1, 2, 3, 4, 9}));
-                System.out.println("arrayFront9(1, 2, 3, 4, 5) = "+arrayFront9(new int[] {1, 2, 3, 4, 5}));
+                System.out.println("arrayFront9([1, 2, 9, 3, 4]) = "+arrayFront9(new int[] {1, 2, 9, 3, 4}));
+                System.out.println("arrayFront9([1, 2, 3, 4, 9]) = "+arrayFront9(new int[] {1, 2, 3, 4, 9}));
+                System.out.println("arrayFront9([1, 2, 3, 4, 5]) = "+arrayFront9(new int[] {1, 2, 3, 4, 5}));
             } break;
             case "array123": {
-                System.out.println("array123(1, 1, 2, 3, 1) = "+array123(new int[] {1, 1, 2, 3, 1}));
-                System.out.println("array123(1, 1, 2, 4, 1) = "+array123(new int[] {1, 1, 2, 4, 1}));
-                System.out.println("array123(1, 1, 2, 1, 2, 3) = "+array123(new int[] {1, 1, 2, 1, 2, 3}));
+                System.out.println("array123([1, 1, 2, 3, 1]) = "+array123(new int[] {1, 1, 2, 3, 1}));
+                System.out.println("array123([1, 1, 2, 4, 1]) = "+array123(new int[] {1, 1, 2, 4, 1}));
+                System.out.println("array123([1, 1, 2, 1, 2, 3]) = "+array123(new int[] {1, 1, 2, 1, 2, 3}));
             } break;
             case "stringMatch": {
                 System.out.println("stringMatch(\"xxcaazz\", \"xxbaaz\") = "+stringMatch("xxcaazz", "xxbaaz"));
@@ -93,20 +93,20 @@ public class Warmup2_TestFunctions extends Warmup2_Exercises {
                 System.out.println("stringYak(\"yak123ya\") = "+stringYak("yak123ya"));
             } break;
             case "array667": {
-                System.out.println("array667(6, 6, 2) = "+array667(new int[] {6, 6, 2}));
-                System.out.println("array667(6, 6, 2, 6) = "+array667(new int[] {6, 6, 2, 6}));
-                System.out.println("array667(6, 7, 2, 6) = "+array667(new int[] {6, 7, 2, 6}));
+                System.out.println("array667([6, 6, 2]) = "+array667(new int[] {6, 6, 2}));
+                System.out.println("array667([6, 6, 2, 6]) = "+array667(new int[] {6, 6, 2, 6}));
+                System.out.println("array667([6, 7, 2, 6]) = "+array667(new int[] {6, 7, 2, 6}));
             } break;
             case "noTriples": {
-                System.out.println("noTriples(1, 1, 2, 2, 1) = "+noTriples(new int[] {1, 1, 2, 2, 1}));
-                System.out.println("noTriples(1, 1, 2, 2, 2, 1) = "+noTriples(new int[] {1, 1, 2, 2, 2, 1}));
-                System.out.println("noTriples(1, 1, 1, 2, 2, 2, 1) = "+noTriples(new int[] {1, 1, 1, 2, 2, 2, 1}));
+                System.out.println("noTriples([1, 1, 2, 2, 1]) = "+noTriples(new int[] {1, 1, 2, 2, 1}));
+                System.out.println("noTriples([1, 1, 2, 2, 2, 1]) = "+noTriples(new int[] {1, 1, 2, 2, 2, 1}));
+                System.out.println("noTriples([1, 1, 1, 2, 2, 2, 1]) = "+noTriples(new int[] {1, 1, 1, 2, 2, 2, 1}));
             } break;
             case "has271": {
-                System.out.println("has271(1, 2, 7, 1) = "+has271(new int[] {1, 2, 7, 1}));
-                System.out.println("has271(1, 2, 8, 1) = "+has271(new int[] {1, 2, 8, 1}));
-                System.out.println("has271(2, 7, 1) = "+has271(new int[] {2, 7, 1}));
-                System.out.println("has271(2, 7, 4) = "+has271(new int[] {2, 7, 4}));
+                System.out.println("has271([1, 2, 7, 1]) = "+has271(new int[] {1, 2, 7, 1}));
+                System.out.println("has271([1, 2, 8, 1]) = "+has271(new int[] {1, 2, 8, 1}));
+                System.out.println("has271([2, 7, 1]) = "+has271(new int[] {2, 7, 1}));
+                System.out.println("has271([2, 7, 4]) = "+has271(new int[] {2, 7, 4}));
             } break;
             default: System.out.println("No method with that name."); break;
         }

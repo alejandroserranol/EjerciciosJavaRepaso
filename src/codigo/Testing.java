@@ -28,8 +28,11 @@ public class Testing {
 //        Warmup2_TestFunctions w2 = new Warmup2_TestFunctions();
 //        w2.testWarmup_2functions();
         
-        String1_TestFunctions s1 = new String1_TestFunctions();
-        s1.testWarmup_2functions();
+//        String1_TestFunctions s1 = new String1_TestFunctions();
+//        s1.testWarmup_2functions();
+        
+        Array1_TestFunctions a1 = new Array1_TestFunctions();
+        a1.testWarmup_2functions();
         
         
         
