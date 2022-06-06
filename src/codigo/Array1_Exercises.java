@@ -67,11 +67,25 @@ public class Array1_Exercises {
         return nums;
     }
     
+    public int[] maxEnd3(int[] nums) {
+        //Given an array of ints length 3, figure out which is larger, the first or last element in the array, and set all the other elements to be that value.
+        //Return the changed array.
+        return nums[0]>=nums[nums.length-1] ? new int[] {nums[0], nums[0], nums[0]} : new int[] {nums[nums.length-1], nums[nums.length-1], nums[nums.length-1]};
+    }
     
+    public int sum2(int[] nums) {
+        //Given an array of ints, return the sum of the first 2 elements in the array.
+        //If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
+        if(nums.length==0){
+            return 0;
+        }
+        return nums.length > 1 ? nums[0] + nums[1] : nums[0];
+    }
     
-    
-    
-    
+    public int[] middleWay(int[] a, int[] b) {
+        //Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+        return new int[] {a[a.length/2], b[b.length/2]};
+    }
     
     
     
